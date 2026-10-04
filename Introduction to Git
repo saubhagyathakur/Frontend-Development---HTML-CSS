@@ -1,0 +1,26 @@
+What is Git?
+It is a distributed version control system that allows developers to track changes to their code over time. Using this, we can collaborate with other developers and manage codebases across multiple platforms. It was developed by Linus Torvalds in 2005 as an alternative to centralized version control systems such as Concurrent Version Systems (CVS).
+
+It was developed to be fast, efficient, and flexible. It has multiple features such as Branching, Merging, and a Staging area for maintaining changes, and we can also work on it in offline mode.
+
+History of Git
+It was developed by Linus Torvalds in 2005, who is also the creator of the Linux operating system. Initially, Linus Torvalds was using BitKeeper for managing Linux kernel source code, but he was unsatisfied with it, so he developed Git as an alternative. Git's first public version was released in April.
+
+Concurrent Version Systems
+In Concurrent Version Systems, all changes are made to the central repository. A team of members work on the same codebase.
+
+Difficulties faced in Concurrent Version Systems:
+Managing concurrent changes made by different team members to the central codebase. It becomes difficult to maintain different versions.
+Requirement of an internet connection for accessing the repository
+Limited merging and branching
+Slow performance
+Lack of Flexibility
+Why Git?
+Distributed model means each developer has a local copy of the entire codebase. If in any situation one developer loses their copy of the codebase, they can still get the codebase from another developer working on the same codebase, but the code may vary according to the changes made by that developer.
+Branching and Merging: If a developer does not want to make direct changes in the main code branch, they can create a test branch, make changes in it, and if satisfied with the changes, then merge this test branch with the main code branch.
+Speed and Performance: Git can handle both small and large codebases.
+Flexibility and Adaptability
+Open Source
+Summary
+Git is a free and open-source distributed version control system that allows developers to track changes to their code over time. Millions of developers use it due to its multiple features such as the distributed model, Branching, Merging, speed, and flexibility, and it has also made collaboration of developers with each other easier.
+
