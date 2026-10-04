@@ -1,0 +1,68 @@
+A URL (Uniform Resource Locator) is a unique address used to locate and access resources on the internet.
+
+Identifies the location of a resource online.
+Specifies the protocol (e.g., HTTP or HTTPS).
+Includes the domain name or IP address.
+May contain a path to a specific resource.
+Used to access web pages, files, images, and other online resources.
+Parts of URL
+A URL is composed of multiple parts, each defining how and where a resource can be accessed.
+
+url_parts
+Scheme: Defines the protocol used to access the resource (e.g., http, https, ftp).
+Subdomain: Specifies a subdivision of the main domain (e.g., www).
+Domain: Identifies the main website name (e.g., example).
+Top-Level Domain (TLD): Indicates the domain extension (e.g., .com, .org).
+Port Number: Specifies the server port (default: 80 for HTTP, 443 for HTTPS).
+Path: Points to the resource location on the server.
+Query String Separator: The ? symbol that starts query parameters.
+Query String / Parameters: Passes data as key–value pairs using &.
+Fragment: Refers to a specific section within the resource using #.
+HTTP
+HTTP (Hypertext Transfer Protocol) is a communication protocol that defines how data is exchanged between clients and web servers.
+
+Used to transfer data over the internet.
+Defines request–response communication between client and server.
+Supports transmission of web pages, images, and other resources.
+Stateless protocol by design.
+HTTPS
+HTTPS (Hypertext Transfer Protocol Secure) is a secure version of HTTP that encrypts data exchanged between clients and servers.
+
+Uses encryption (SSL/TLS) to protect data.
+Prevents interception and tampering.
+Ensures secure communication between client and server.
+Difference between HTTP and HTTPS
+Here are some differences between HTTP and HTTPS:
+
+HTTP	HTTPS
+Stands for Hypertext Transfer Protocol	Stands for Hypertext Transfer Protocol Secure
+Data is sent in plain text	Data is encrypted using SSL/TLS
+Uses port 80 by default	Uses port 443 by default
+No built-in security	Provides secure communication via encryption
+Vulnerable to attacks such as MITM	Resistant to attacks such as MITM
+Faster without encryption overhead	Slight overhead due to encryption (negligible in modern systems)
+Used where security is not critical	Used where secure data transmission is required
+Does not require SSL/TLS certificate	Requires SSL/TLS certificate
+Client-Server Model Encryption
+Secure communication in the client–server model is achieved through encryption, ensuring data exchanged between clients and servers remains protected.
+
+In the client–server model, a client sends requests and the server returns responses.
+Encryption converts data into a secure form to prevent unauthorized access.
+HTTPS secures client–server communication using SSL/TLS.
+SSL/TLS provide encryption and authentication for secure data transfer.
+HTTP transfers data but does not provide encryption.
+SSL And TLS Certificates
+SSL and TLS are security protocols that encrypt internet communication and verify server identity to ensure secure data transfer.
+
+SSL (Secure Sockets Layer) and TLS (Transport Layer Security) encrypt data between client and server.
+Protect communication from interception and unauthorized access.
+Use digital certificates to authenticate web servers.
+Certificates are issued by trusted Certificate Authorities (CAs).
+Clients verify certificates before establishing a secure connection.
+Public Key and Symmetric Key
+Encryption can be classified into public key and symmetric key methods, each using different key mechanisms for securing data.
+
+Public key encryption: Uses a public key for encryption and a private key for decryption.
+Public key can be shared openly; private key is kept secret.
+Symmetric key encryption: Uses a single shared key for both encryption and decryption.
+Symmetric encryption is faster than public key encryption.
