@@ -1,0 +1,146 @@
+Meta tags are HTML elements in the <head> section that provide metadata about a webpage for browsers, search engines, and other services.
+
+Meta Tag Provide essential information like page description, keywords, author, and character encoding.
+Help search engines understand and rank web pages (SEO).
+Control responsive behavior using viewport settings for different devices.
+Used by browsers and web services to properly render and interpret content.
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content=
+        "Free Computer Science Content" />
+    <meta name="keywords" content="HTML" />
+    <meta name="author" content="GFG" />
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0" />
+</head>
+​
+<body>
+    <p>Meta Tags are used in this HTML Web page</p>
+</body>
+​
+</html>
+Syntax: 
+
+<head>
+   <meta attribute-name = "value"/>  
+</head>
+Attributes
+Meta tag attributes describe what type of metadata is provided and how it should be used by browsers or search engines. The following attributes with their values are described below:
+
+name: The name attribute is used for indicating the character encoding for the HTML Document.
+http-equiv: This attribute is used to get the HTTP response message header (http-equiv Meta Tag Attribute).
+content: The Content attribute is used to specify properties value.
+charset: The attribute used to specify the character encoding of an HTML document is called charset.
+Uses of Meta Tags in HTML
+Meta tags in HTML provide information about a webpage, help search engines understand its content, control display on different devices, and improve accessibility and performance.
+
+1. Specifying Important Keywords
+The meta tag stores important keywords and information about a web page.
+Search engines use this data to understand and rank the page in search results.
+This process of improving page ranking is known as Search Engine Optimization (SEO).
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<head>
+    <!-- meta tag starts -->
+    <meta name="keywords" content=
+        "Meta Tags HTML GFG Meta Data " />
+    <!-- meta tag ends -->
+​
+</head>
+​
+<body>
+    <p>This is a MetaTags Web page</p>
+</body>
+​
+</html>
+2. Automatic Refresh
+A specified time will be mentioned in the meta tag after which the webpage will be automatically refreshed.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<head>
+​
+    <!-- meta tag starts -->
+    <meta name="revised about" 
+        content="GeeksforGeeks" />
+    <meta http-equiv="refresh" content="8" />
+    <!-- meta tag ends -->
+</head>
+​
+<body>
+    <p>We are using refresh meta tag</p>
+</body>
+​
+</html>
+The web page will be reloaded after 8 seconds as mentioned in the meta tag.
+
+3. Specifying Author of the Webpage
+Meta tag allows us to mention the name of the author of the webpage as follows.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<head>
+​
+    <!-- meta tag starts -->
+    <meta name="author" content="U Phani Teja" />
+    <!-- meta tag ends -->
+    
+</head>
+​
+<body>
+    <p>
+        We are specifying name of 
+        the Author in the Meta Tag
+    </p>
+</body>
+​
+</html>
+4. Providing a Description of the web page:
+A brief description of the web page can be included in the Meta tag, which will help the web page rank on the internet.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<head>
+​
+    <!-- meta tag starts -->
+    <meta name="description" 
+        content="All About Meta tags" />
+    <!-- meta tag ends -->
+​
+</head>
+​
+<body>
+    <p>
+        A brief Description of the WebPage 
+        is present in the webapage
+    </p>
+</body>
+​
+</html>
