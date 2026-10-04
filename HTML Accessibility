@@ -1,0 +1,241 @@
+HTML accessibility refers to the practice of writing HTML code in a way that makes web content usable and understandable for all users, including people with disabilities. It ensures that websites can be accessed effectively using assistive technologies such as screen readers, keyboards, and voice navigation.
+
+Uses proper HTML tags to clearly organize and explain the content.
+Makes websites easier to navigate and use for people with different disabilities.
+Improves overall user experience and helps websites work better on search engines and devices.
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, 
+                   initial-scale=1.0">
+    <title>Accessible Website Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+​
+<body>
+    <header>
+        <h1>Welcome to Our Accessible Website</h1>
+    </header>
+​
+    <nav>
+        <ul>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+​
+    <main>
+        <h2>About Us</h2>
+        <p>We are a company dedicated to 
+          creating accessibleand user-friendly
+          websites. We believe everyone 
+           deserves a positive web experience.
+          </p>
+​
+        <img alt="GFG Logo" src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20240316121026/GFG-logo.jpg">
+​
+        <h2>Services</h2>
+        <p>We offer a variety of web development
+           services, including:
+          </p>
+        <ul>
+            <li>Accessible HTML and CSS coding</li>
+            <li>Website design and development</li>
+            <li>Content creation and management</li>
+        </ul>
+​
+        <h2>Contact</h2>
+​
+        <address>123 Main Street,
+          Anytown, CA 12345</address>
+​
+        <p id="contact-info">
+            Our office address is:
+        </p>
+​
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name"
+                   name="name" required>
+​
+            <label for="email">Email:</label>
+            <input type="email" id="email"
+                   name="email" required>
+​
+            <label for="message">Message:</label>
+            <textarea id="message"
+                      name="message"
+                      required></textarea>
+​
+            <button type="submit">Send Message</button>
+        </form>
+    </main>
+​
+​
+    <footer>
+        <p>&copy; 2024 Accessible
+          Website Example</p>
+    </footer>
+</body>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+h1,h2,h3 {
+    margin: 1em 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+p {
+    margin: 0.5em 0;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 50%;
+    display: block;
+    margin: 1em auto;
+}
+
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav {
+    background-color: #e9ecef;
+    padding: 0.5em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #343a40;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+main {
+    padding: 1em;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#contact-info address {
+    font-style: italic;
+}
+
+form {
+    margin: 1em 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0062cc;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+
+​
+</html>
+Output:
+
+Output
+Output
+Benefits
+Here are some key benefits of structuring HTML properly to create accessible, user-friendly, and search-engine-optimized websites.
+
+1. Inclusivity
+Uses clear HTML tags, proper headings, and descriptive attributes to make websites accessible to everyone, including people with disabilities.
+Includes features like alternative text for images, language declaration, meaningful link text, and accessible data tables for screen readers.
+2. SEO Friendliness
+Structures web content in a way that search engines can easily understand and index.
+Improves visibility in search results by using semantic HTML and accessible content practices.
+3. Mobile Responsiveness
+Ensures websites are easy to navigate and interact with on mobile devices.
+Enhances usability for all users, including those with disabilities, on smartphones and tablets.
+Structure Your HTML for Web Accessibility
+Below are the key methods used to structure your HTML for better web accessibility.
+
+1. Semantic HTML
+Uses meaningful HTML tags to clearly define content purpose.
+Helps screen readers and assistive technologies understand page structure.
+2. Proper Use of Headings
+Uses <h1> for main titles and <h2>–<h6> for subheadings.
+Improves content navigation and readability.
+3. Alternative Text for Images
+Provides image descriptions using the alt attribute.
+Helps users when images do not load or when using screen readers.
+4. Declaring the Page Language
+Uses the lang attribute to specify the document language.
+Improves pronunciation and interpretation by screen readers.
+5. Meaningful Link Text
+Uses descriptive link text instead of generic phrases.
+Helps users understand link purpose before clicking.
+6. Accessible Data Tables
+Uses <th> and <caption> to define table structure clearly.
+Improves data understanding for screen reader users.
+If you are facing an
+
+
