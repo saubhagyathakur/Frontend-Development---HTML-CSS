@@ -1,0 +1,39 @@
+Track files:
+Tracking files means including them in the version control system, so that any changes made to those files can be recorded and managed.
+After cloning the repository and navigating to the local repository folder, use the command git add <file-name> to track a specific file or git add . to track all files in the current directory.
+Untrack files:
+Untracking files means excluding them from the version control system, so that any changes made to those files will not be recorded or managed.
+To untrack files in Git, use the command git rm --cached <file-name> in the terminal or command prompt. This command removes the file from the tracking list without deleting it from your local file system.
+Uploading Files To GitHub
+1. Create a new repository on GitHub or navigate to the repository where you want to upload the file.
+
+2. Clone the repository to your local machine using Git. Open a terminal or command prompt and run the following command, replacing <repository-url> with the URL of your repository:
+
+git clone <repository-url>
+3. Navigate to the cloned repository on your local machine:
+
+cd <repository-name>
+ 4. Copy the file you want to upload into the cloned repository folder on your local machine.
+
+ 5. Track the file by adding it to the Git staging area using the following command:
+
+git add <file-name>
+Replace <file-name> with the name of the file you want to upload. This will include the file in the version control system for tracking changes.
+
+ 6. Commit the changes with a meaningful commit message:
+
+git commit -m "Add file <file-name>"
+ 7. If you want to untrack any files that should not be included in the version control system, use the following command:
+
+git rm --cached <file-name>
+Replace <file-name> with the name of the file you want to untrack. This will exclude the file from being tracked by Git.
+
+ 8. Push the changes to the remote repository on GitHub:
+
+git push origin main
+Replace main with the branch name of your repository if it's different.
+
+ 9. Enter your GitHub username and password or personal access token when prompted.
+
+ 10. Once the push is complete, the file and its tracking status will be uploaded to the Git repository.
+
