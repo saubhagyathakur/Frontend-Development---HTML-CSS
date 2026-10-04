@@ -1,0 +1,103 @@
+HTML Microdata is a specification used to embed structured data directly into HTML content. It helps search engines better understand webpage information by adding meaningful metadata to HTML elements.
+
+Uses predefined attributes to describe items and their properties.
+Helps search engines interpret content more accurately.
+Enables enhanced search results like rich snippets and knowledge panels.
+Improves SEO visibility and content understanding.
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<body>
+    <div itemscope>
+        <p>This website is
+            <span itemprop="name" 
+                style="color:green">
+                <b>GeeksForGeeks</b>
+            </span>.
+        </p>
+    </div>
+​
+    <div itemscope>
+        <p>
+            Learn from the basics,of Data 
+            Structure and Algorithms from
+            <span itemprop="name" 
+                style="color:green">
+                <b>DSA-Self Paced</b>
+            </span>.
+        </p>
+​
+        <p>I live in
+            <span itemprop="country" 
+                style="color:green">
+                <b>India</b>
+            </span>.
+        </p>
+    </div>
+</body>
+​
+</html>
+Microdata Vocabulary
+Microdata Vocabulary defines the meaning and structure of items used in HTML Microdata. It allows developers to describe data clearly by using a namespace URL and predefined properties.
+
+Developers can use existing vocabularies or create custom ones.
+A namespace URL is required to define a microdata vocabulary.
+Properties in the Vocabulary
+name: Represents the person’s name as a simple string.
+country: Represents the country name as a simple string.
+url: Represents the personal website URL of the user.
+photo: Represents a URL pointing to the user’s image.
+Global Attributes
+HTML attributes provide additional information about an element and define its properties. Global attributes are special types of attributes that can be used with any HTML element, offering common functionality to enhance behavior and presentation.
+
+Global attributes can be applied to any HTML element, such as <div>, <p>, <img>, and more.
+They control various aspects like styling, identification, accessibility, and interaction, improving web page design and functionality.
+Common global attributes include id, class, style, title, and lang.
+Benefits of HTML Microdata
+HTML Microdata offers several advantages that improve search visibility, content understanding, and overall website performance. below are the benefits of HTML Microdata:
+
+1. Improved Search Engine Understanding
+Helps search engines clearly understand the meaning of webpage content.
+Provides structured data that improves content interpretation.
+2. Enhanced Search Results
+Enables rich results such as ratings, reviews, and event details.
+Makes search listings more informative and visually appealing.
+3. Better SEO and Accessibility
+Improves SEO by supplying meaningful and structured metadata.
+Makes content more machine-readable and accessible.
+Microdata Parsing Example
+When Google’s crawler detects microdata that matches the https://abc-xyz.org/geek vocabulary, it extracts and stores this data along with the page information.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<body>
+    <div itemscope>
+        <section itemscope 
+            itemtype="https://abc-xyz.org/geek">
+            <h1 itemprop="name">GeeksForGeeks</h1>
+            <p>
+                <img itemprop="photo"
+                    src=
+"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200817185016/gfg_complete_logo_2x-min.png">
+            </p>
+​
+            <a itemprop="url" href=
+                "https://www.geeksforgeeks.org/">
+                Link to Site
+            </a>
+        </section>
+    </div>
+</body>
+​
+</html>
+
+
