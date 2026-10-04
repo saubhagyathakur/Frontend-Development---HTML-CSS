@@ -1,0 +1,111 @@
+LocalStorage and SessionStorage are Web Storage API features that let web applications store data in the browser as key–value pairs for client-side state management.
+
+Store data as key–value pairs in the browser.
+LocalStorage persists data even after the browser is closed.
+SessionStorage stores data for a single browser session.
+Data is accessible only within the same origin.
+Useful for client-side preferences, tokens, and temporary state.
+SessionStorage
+SessionStorage stores data on the client side for the duration of a single browser tab or session.
+
+Used for temporary client-side data storage.
+Storage limit is approximately 5 MB.
+Data persists only while the current tab is open.
+Data is automatically cleared when the tab is closed.
+Note: When a closed tab is restored (Ctrl + Shift + T), SessionStorage may persist in Chrome and Firefox but not in Safari. This behavior is browser-dependent.
+
+LocalStorage
+LocalStorage is used to store data on the client side with no expiration time, allowing data to persist until it is manually removed.
+
+Stores data on the client side.
+Storage limit is approximately 5 MB.
+Data persists even after the browser is closed.
+Data is removed only when the user clears it.
+Main difference from SessionStorage is data persistence.
+Below are the details about SessionStorage and LocalStorage:
+
+1. Both are Object type
+Both SessionStorage and LocalStorage are object-based storage mechanisms that store data as key–value pairs in the browser.
+
+Selection_106
+2. Format of storing data in SessionStorage and LocalStorage:
+Data must be stored in key-value pair in the SessionStorage and LocalStorage and key-value must be either number or string
+
+neww
+Data stored in LocalStorage as a string or number is saved and retrieved correctly.
+When a plain JavaScript object is stored directly, it is automatically converted to a string.
+As a result, retrieving the object returns "[object Object]" instead of the actual data.
+This occurs because LocalStorage only supports string value.
+LocalStorage.setItem("geek", {
+"key":"value"
+})
+undefined
+LocalStorage.getItem("geek")
+"[object Object]"
+To store objects or non-string data in LocalStorage, they must first be converted into a string.
+
+LocalStorage.setItem("geeks", JSON.stringify({
+"key":"value"
+}))
+undefined
+LocalStorage.getItem("geeks")
+"{"key":"value"}"
+In this attempt we use JSON.stringify() method to convert an object into string.
+
+Common Methods
+Listed below are the commonly used methods of LocalStorage and SessionStorage.
+
+1. For storing data in web storage
+Use setItem() to store key–value pairs (values are stored as strings).
+
+LocalStorage.setItem("key", "value");  //key and value both should be string or number;
+SessionStorage.setItem("key", "value");  //key and value both should be string or number;
+neww
+2. For getting data from web storage
+Use getItem(key) to retrieve the value associated with the given key from storage.
+
+LocalStorage.getItem("key");
+SessionStorage.getItem("key");
+
+Here we will pass the key and it will return value.
+neww
+3. For Getting the length of web storage object
+Use the length property to get the total number of stored key–value pairs.
+
+LocalStorage.length; 
+SessionStorage.length;
+neww
+4. For deleting a particular key-value pair
+Use removeItem(key) to delete the stored data associated with the specified key from Web Storage.
+
+LocalStorage.removeItem("key");
+SessionStorage.removeItem("key");
+neww
+5. For clearing complete storage
+Use the clear() method to remove all key–value pairs from LocalStorage or SessionStorage.
+
+LocalStorage.clear();
+SessionStorage.clear();
+neww
+6. For getting nth key name from web storage we will pass the number n
+Use the key(n) method to retrieve the name of the key at index n from storage.
+
+LocalStorage.key(n);
+SessionStorage.key(n);
+newmg
+Note:
+
+Web Storage stores data in plain text, so sensitive information like passwords or payment details should never be stored there.
+Web Storage is accessible only on the client side; for server-side data storage, cookies are a better option.
+Storing Non-String values with JSON
+Web Storage supports only string values, so objects and arrays must be converted to strings before storing.
+
+Use JSON.stringify() to convert an object or array into a string.
+Store the string in localStorage or sessionStorage.
+Use JSON.parse() to convert the stored string back into its original form.
+let gfgObj = { name: "GeeksForGeeks", score: "100" };
+localStorage.setItem(key, JSON.stringify(gfgObj));
+
+let item = JSON.parse(localStorage.getItem(key));
+Note: The same approach works for sessionStorage as well.
+
