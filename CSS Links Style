@@ -1,0 +1,467 @@
+Styling links in CSS is a fundamental web design practice that enhances navigation and user interaction. It helps create a consistent and visually appealing experience that aligns with a website’s design or brand.
+
+CSS allows customization of link colors, fonts, and decorations.
+Different link states (normal, hover, active, visited) improve usability.
+Well-styled links make navigation clearer and more intuitive.
+Consistent link styling strengthens overall website branding.
+Below are the approaches to style links in CSS:
+
+[Approach 1]: Basic Link Styling
+Basic styling customizes links to match the website’s visual theme.
+
+Changes default link color and font.
+Removes or modifies underlines.
+Maintains a clean and consistent look.
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+     content="width=device-width,
+      initial-scale=1.0">
+    <title>Basic Link Styling</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+​
+        .container {
+            background-color: white;
+            border: 2px solid #dcdcdc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba
+            (0, 0, 0, 0.1);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+​
+        a {
+            color: royalblue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+​
+<body>
+    <div class="container">
+        <a href="#">This is a styled 
+            link</a>
+    </div>
+</body>
+​
+</html>
+[Approach 2]: Hover Effects
+Hover effects provide visual feedback when users interact with links.
+
+Changes color or background on hover.
+Adds underline or shadow effects.
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+     content="width=device-width,
+      initial-scale=1.0">
+    <title>Hover Effects</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+​
+        .container {
+            background-color: white;
+            border: 2px solid #dcdcdc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba
+            (0, 0, 0, 0.1);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+​
+        a {
+            color: royalblue;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out,
+             background-color 0.3s ease-in-out;
+        }
+​
+        a:hover {
+            color: crimson;
+            text-decoration: underline;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+​
+<body>
+    <div class="container">
+        <a href="#">Hover over this link</a>
+    </div>
+</body>
+​
+</html>
+[Approach 3]: Active Link Styling
+Active styling visually indicates a link is being clicked.
+
+Applies styles during the click action.
+Gives instant user feedback.
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+     content="width=device-width,
+      initial-scale=1.0">
+    <title>Active Link Styling 
+        | GeeksForGeeks</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+​
+        .container {
+            background-color: white;
+            border: 2px solid #dcdcdc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba
+            (0, 0, 0, 0.1);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+​
+        a {
+            color: royalblue;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s ease-in-out,
+             background-color 0.2s ease-in-out;
+        }
+​
+        a:active {
+            color: seagreen;
+            text-decoration: underline;
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+​
+<body>
+    <div class="container">
+        <a href="#">Click this link</a>
+    </div>
+</body>
+​
+</html>
+[Approach 4]: Visited Link Styling
+Visited styling helps users identify previously clicked links.
+
+Uses different colors for visited links.
+Improves navigation experience.
+Helps distinguish visited and unvisited links.
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+     content="width=device-width,
+      initial-scale=1.0">
+    <title>Visited Link Styling</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+​
+        .container {
+            background-color: white;
+            border: 2px solid #dcdcdc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba
+            (0, 0, 0, 0.1);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+​
+        a {
+            color: royalblue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+​
+        a:visited {
+            color: purple;
+            text-decoration: none;
+        }
+    </style>
+</head>
+​
+<body>
+    <div class="container">
+        <a href="#" id="dynamicLink">
+            Visit this link</a>
+    </div>
+​
+    <script>
+        document.addEventListener
+        ('DOMContentLoaded', () => {
+            const link = 
+            document.getElementById('dynamicLink');
+            link.href = '#?' + new Date().getTime();
+        });
+    </script>
+</body>
+​
+</html>
+[Approach 5]: Custom Underline Styles
+Custom underlines enhance link appearance beyond defaults.
+
+Uses different underline colors and styles.
+Adjusts underline thickness or position.
+Creates a modern visual effect.
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+     content="width=device-width,
+      initial-scale=1.0">
+    <title>Custom Underline Styles</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+​
+        .container {
+            background-color: white;
+            border: 2px solid #dcdcdc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba
+            (0, 0, 0, 0.1);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+​
+        a {
+            color: royalblue;
+            text-decoration: none;
+            position: relative;
+        }
+​
+        a::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: royalblue;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+        }
+    </style>
+</head>
+​
+<body>
+    <div class="container">
+        <a href="#">Custom underline 
+            style</a>
+    </div>
+</body>
+​
+</html>
+[Approach 6]: Button-Like Links
+Button-style links make links more prominent and clickable.
+
+Adds padding and background color.
+Uses border radius for button shape.
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+     content="width=device-width,
+      initial-scale=1.0">
+    <title>Button-Like Links 
+        | Shivam Mudaliar</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+​
+        .container {
+            background-color: white;
+            border: 2px solid #dcdcdc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba
+            (0, 0, 0, 0.1);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+​
+        a {
+            color: white;
+            background-color: royalblue;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: 
+            background-color 0.3s ease-in-out;
+        }
+​
+        a:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+​
+<body>
+    <div class="container">
+        <a href="#">Button-like link</a>
+    </div>
+</body>
+​
+</html>
+[Approach 7]: Animated Link Styles
+Animated styles add smooth transitions to link interactions.
+
+Uses CSS transitions or animations.
+Creates engaging visual effects.
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+     content="width=device-width,
+      initial-scale=1.0">
+    <title>Animated Link Styles</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+​
+        .container {
+            background-color: white;
+            border: 2px solid #dcdcdc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba
+            (0, 0, 0, 0.1);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+​
+        a {
+            color: royalblue;
+            text-decoration: none;
+            position: relative;
+            font-family: 'Arial', sans-serif;
+            transition: color 0.3s ease-in-out;
+        }
+​
+        a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: crimson;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+        }
+​
+        a:hover {
+            color: crimson;
+        }
+​
+        a:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+​
+<body>
+    <div class="container">
+        <a href="#">Hover to see 
+            the animation</a>
+    </div>
+</body>
+​
+</html>
