@@ -1,0 +1,83 @@
+The web works on a client–server model where browsers act as clients requesting resources. Websites are rendered by interpreting and combining multiple web technologies.
+
+Server delivers HTML, CSS, and JavaScript.
+Browser builds the page structure and renders the content.
+World Wide Web (WWW)
+WWW (World Wide Web) is a system of interconnected hypertext documents accessed over the internet that allows users to view and share information in various formats such as text, images, audio, and video.
+
+It is a collection of interlinked web pages accessed via the internet.
+Transformed global communication and information sharing.
+Works on standards such as HTTP, HTML, and URLs.
+History Of Web
+The World Wide Web was invented in 1989 by Tim Berners-Lee at CERN to enable easy information sharing between scientists. Since then, the web has rapidly evolved from simple static pages into a dynamic, interactive, and intelligent global platform.
+
+Web-Evolution_
+1989: Tim Berners-Lee proposed the WWW while working at CERN.
+1990: First web browser and server developed, Archie search engine introduced.
+1991: First website went live and became publicly accessible.
+1993: Mosaic, the first popular graphical web browser, was released.
+Late 1990s: Dot-com boom expanded e-commerce and online businesses.
+2000s: JavaScript and CSS enabled dynamic and interactive websites.
+Mid-2000s: Rise of social media platforms like Facebook and YouTube.
+Present Day: Emerging technologies such as AI, VR, and IoT continue to shape the future of the web.
+Webpage 
+A webpage is a single document within a website that is displayed in a web browser. It presents information or functionality to users using web technologies.
+
+Created using HTML and other web technologies.
+Can contain multimedia content and interactive elements.
+May be static or dynamically generated.
+Working
+A webpage is created using HTML, CSS, and JavaScript, which work together to define structure, style, and interactivity. When requested, the browser processes these files step by step to display the final webpage.
+
+HTML provides the basic structure and content of the webpage.
+CSS controls layout, colors, fonts, and overall appearance.
+JavaScript enables interactivity such as buttons, menus, and animations.
+Web server sends required files to the user’s browser.
+Browser creates the DOM from HTML and applies CSS styles.
+JavaScript runs to add dynamic behavior and user interactions.
+User actions can trigger new requests and page updates.
+web_broser_request_to_web_server
+Domain Name
+A domain name is a unique and readable address used to access a website on the internet through the Domain Name System (DNS).
+
+Maps a human-friendly name to an IP address.
+Follows a hierarchical structure: subdomain, domain name, and TLD.
+Registered and renewed through domain registrars.
+Example: In www.example.com, www is the subdomain, example is the domain name, and .com is the top-level domain.
+Browser Rendering
+Browser rendering is the process by which a web browser converts webpage code into a visible and interactive page for the user.
+
+The browser’s rendering engine parses HTML and CSS.
+Builds the Document Object Model (DOM) from HTML.
+Applies CSS rules to style the DOM elements.
+Executes JavaScript to add dynamic behavior.
+Displays the final rendered output to the user.
+Rendering performance depends on browser, device, network speed, and page complexity.
+Client-Side Rendering
+Client-side rendering (CSR) is a web rendering approach where the browser builds and displays the webpage using resources provided by the server.
+
+Rendering is handled entirely by the user’s browser.
+Server delivers HTML, CSS, and JavaScript files.
+JavaScript controls page updates and interactions.
+Enables dynamic and interactive user experiences.
+Commonly used in single-page applications (SPAs).
+Server-Side Rendering
+Server-side rendering (SSR) is a rendering approach where the server generates the complete HTML page and sends it to the browser.
+
+Rendering occurs on the server.
+Suitable for content-heavy or frequently updated websites.
+Improves initial page load and SEO.
+Commonly used in CMS platforms.
+Inspect Command
+The Inspect command is a browser tool that lets you view and modify a webpage’s HTML, CSS, and JavaScript, and is available in modern browsers like Google Chrome, Mozilla Firefox, and Microsoft Edge.
+
+To use the inspect command, follow these steps:
+
+Open your web browser and navigate to the webpage you want to inspect.
+Right-click anywhere on the page and select "Inspect" from the context menu. Alternatively, you can use the keyboard shortcut Ctrl+Shift+I (Windows, Linux) or Cmd+Option+I (Mac).
+The developer tools window will appear, showing you the HTML, CSS, and JavaScript of the page.
+Use the various tabs and tools within the developer tools to inspect and manipulate the webpage as needed.
+Example :
+
+
+Inspect Command
