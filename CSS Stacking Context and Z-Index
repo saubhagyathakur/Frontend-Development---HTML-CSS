@@ -1,0 +1,286 @@
+The stacking order describes the order in which HTML elements are positioned. By default, HTML elements are positioned in the following order:
+
+Root element(<html>)
+Non-positioned elements in the order they're defined(elements with no position described, i.e., static)
+Positioned elements in the order they are defined(elements with a position other than static)
+Let us try to understand how the default stacking order works:
+
+Example 1: Default stacking order
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<head>
+    <title>Default stacking order</title>
+​
+    <style>
+        .box {
+            box-sizing: border-box;
+            font-family: Arial;
+            color: #eee;
+            width: 125px;
+            height: 125px;
+            text-align: center;
+        }
+​
+        .blue,
+        .green {
+            position: absolute;
+        }
+​
+        .red {
+            background: red;
+        }
+​
+        .green {
+            background: green;
+            top: 40px;
+            left: 40px;
+        }
+​
+        .blue {
+            background: blue;
+            top: 80px;
+            left: 80px;
+        }
+    </style>
+</head>
+​
+<body>
+    <div class="box green">Positioned</div>
+    <div class="box blue">Positioned</div>
+    <div class="box red">Non-positioned</div>
+</body>
+​
+</html>
+Output:
+
+z-index: In order to change the stacking order, we can use z-index. Element with higher z-index is placed on top of the element with lower z-index. Let us use the same. An important thing to note is that in order to use z-index, elements should be positioned. To learn more about CSS, positions, refer this article.
+
+Example 2: Stacking with z-index
+
+We use the previous example, but this time we will apply a z-index value to the green and blue boxes.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<head>
+    <title>Stacking with z-index</title>
+​
+    <style>
+        .box {
+            box-sizing: border-box;
+            font-family: Arial;
+            color: #eee;
+            width: 125px;
+            height: 125px;
+            text-align: center;
+        }
+​
+        .blue,
+        .green {
+            position: absolute;
+        }
+​
+        .red {
+            background: red;
+            z-index: 100;
+            /*No effect since red is non-positioned*/
+        }
+​
+        .green {
+            background: green;
+            top: 40px;
+            left: 40px;
+            z-index: 3;
+        }
+​
+        .blue {
+            background: blue;
+            top: 80px;
+            left: 80px;
+            z-index: 2;
+        }
+    </style>
+</head>
+​
+<body>
+    <div class="box green">Positioned</div>
+    <div class="box blue">Positioned</div>
+    <div class="box red">Non-positioned</div>
+</body>
+​
+</html>
+Example 3: Now in order to understand stacking context, Let's say we add another box to the layout and we want the blue box to be behind it. 
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<head>
+    <title>Stacking context</title>
+​
+    <style>
+        .box {
+            box-sizing: border-box;
+            font-family: Arial;
+            color: #eee;
+            width: 125px;
+            height: 125px;
+            text-align: center;
+        }
+​
+        .blue,
+        .green,
+        .orange,
+        .purple {
+            position: absolute;
+        }
+​
+        .red {
+            background: red;
+            z-index: 100;
+        }
+​
+        .green {
+            background: green;
+            top: 60px;
+            left: 50px;
+            z-index: 1;
+        }
+​
+        .orange {
+            width: 85px;
+            height: 85px;
+            left: 20px;
+            background-color: orange;
+            font-family: Arial;
+            z-index: 3;
+        }
+​
+        .purple {
+            background-color: purple;
+            top: 30px;
+            left: 30px;
+            z-index: 0;
+​
+        }
+​
+        .blue {
+            background: blue;
+            top: 100px;
+            left: 100px;
+            z-index: 2;
+        }
+    </style>
+</head>
+​
+<body>
+    <div class="box green">Positioned
+        <div class="orange">Positioned</div>
+    </div>
+    <div class="box purple">Positioned</div>
+    <div class="box blue">Positioned</div>
+    <div class="box red">Non-positioned</div>
+</body>
+​
+</html>
+Example 4: If we want to place blue box on top of orange box, there are two things that we can do:
+
+Either make the blue box a child element of green box
+Define orange box outside the green box
+Here, we will make blue box a child element of green box.
+
+
+
+
+
+        .purple {
+            position: absolute;
+<!DOCTYPE html>
+<html>
+​
+<head>
+    <title>Modified stacking context</title>
+​
+    <style>
+        .box {
+            box-sizing: border-box;
+            font-family: Arial;
+            color: #eee;
+            width: 125px;
+            height: 125px;
+            text-align: center;
+        }
+​
+        .blue,
+        .green,
+        .orange,
+        .purple {
+            position: absolute;
+        }
+​
+        .red {
+            background: red;
+            z-index: 100;
+        }
+​
+        .green {
+            background: green;
+            top: 60px;
+            left: 50px;
+            z-index: 1;
+        }
+​
+        .orange {
+            width: 85px;
+            height: 85px;
+            top: 40px;
+            left: 25px;
+            background-color: orange;
+            font-family: Arial;
+            z-index: 3;
+        }
+​
+        .purple {
+            background-color: purple;
+            top: 30px;
+            left: 30px;
+            z-index: 0;
+​
+        }
+​
+        .blue {
+            background: blue;
+            width: 85px;
+            height: 85px;
+            top: 25px;
+            left: 10px;
+            z-index: 2;
+        }
+    </style>
+</head>
+​
+<body>
+    <div class="box green">Positioned
+        <div class="orange">Positioned</div>
+        <div class="blue">Positioned</div>
+    </div>
+    <div class="box purple">Positioned</div>
+    <div class="box red">Non-positioned</div>
+</body>
+​
+</html>
+
+
