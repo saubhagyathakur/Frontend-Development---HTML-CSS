@@ -1,0 +1,225 @@
+HTML media element tags allow audio and video content to be embedded and played directly in web pages without external plugins.
+
+Embed audio and video directly using HTML.
+Provide built-in controls like play, pause, volume, and fullscreen.
+Supported by all modern browsers.
+Playback behavior can be customized using attributes.
+They are widely used in modern websites for tutorials, entertainment, presentations, and interactive applications.
+
+Media Tags
+Given below he types of media tags:
+
+1. <audio>
+The <audio> tag is used to embed sound or audio content (like music or voice) directly into a webpage and provides controls such as play, pause, and volume.
+
+Syntax:
+
+<audio>
+    <source src="sample.mp3" type="audio/mpeg">
+</audio>
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<head>
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+</head>
+​
+<body>
+    <h1>GeeksforGeeks</h1>
+    <p>Audio Sample</p>
+    <!--- Autoplay ensure to run audio automatically
+              after running the program -->
+    <audio controls autoplay>
+        <source src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20190531165842/Recording1514.ogg"
+            type="audio/ogg">
+        <source src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20190531165842/Recording1514.mp3"
+            type="audio/mpeg">
+    </audio>
+</body>
+​
+</html>
+2. <video>
+The <video> tag is used to embed video content in a webpage and supports playback controls like play, pause, volume, and fullscreen.
+
+Syntax:
+
+ <video src="" controls>   </video>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>GeeksforGeeks</h1>
+        <p>Video Sample</p>
+        <video width="200" height="150" controls preload>
+            <source src="myvid.mp4" type="video/mp4">
+            <source src="myvid.ogg" type="video/ogg">
+        </video>
+    </center>
+</body>
+</html>
+Adding youtube videos
+YouTube videos can be added to a webpage by embedding them using the <iframe> tag, allowing videos to play directly on the site.
+
+Steps to Add a YouTube Video
+Open the video on YouTube.
+Click the Share button below the video.
+Select Embed.
+Copy the iframe code provided by YouTube.
+Paste the code into your HTML file where you want the video to appear.
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<head>
+    <title>Page Title</title>
+</head>
+​
+<body>
+    <iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/YAC8aZGHBEU?si=9qdNkTf5zY6mxbQC" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+    </iframe>
+</body>
+​
+</html>
+3. <embed>
+The <embed> tag is used to embed external content such as PDFs, videos, or multimedia files directly into a webpage.
+
+Syntax:
+
+<embed attributes>
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<head>
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+</head>
+​
+<body>
+    <h1>GeeksforGeeks</h1>
+    <p>Embed Sample</p>
+    <embed src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20210723103530/simplescreesdfdsrecorder2021071.gif"
+           width="300px" height="300px">
+</body>
+​
+</html>
+Output:
+
+4. <source>
+As you can observe that  <audio>, <video>  elements contain the <source> element, the <source> tag is  used to attach multimedia files.
+
+Syntax:
+
+<source src="" type="">
+   ...
+</source>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>GeeksforGeeks</h1>
+        <h2>Source Tag</h2>
+        <audio controls>
+            <source src="audio.mp3" 
+                    type="audio/mp3">
+        </audio>
+    </center>
+</body>
+</html>
+Output:
+
+
+
+5. <track>
+It is used to specify subtitles, captions, or other text files that should be displayed while the media is playing. It serves as a simple component for the <audio> and <video> elements.
+
+Syntax:
+
+<track Attribute>
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<head>
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+</head>
+​
+<body>
+    <h1>GeeksforGeeks</h1>
+    <h2>Track Tag: Both Audio and Video</h2>
+    <video width="300" height="300" controls>
+        <source src="myvid.mp4" type="video/mp4">
+        <track src=
+"https://contribute.geeksforgeeks.org/wp-content/uploads/11.mp4" 
+               kind="subtitle" srclang="en"
+                  label="English">
+    </video>
+</body>
+​
+</html>
+Output:
+
+
+
+Advantage of Media tag
+Plugins are no longer required
+Anything natively integrated into the browser is rendered and executed faster than third-party integrations.
+Native (built-in) controls are provided by the browser.
+Accessibilities (keyboard, mouse) are built-in automatically
