@@ -1,0 +1,107 @@
+The <a> tag defines a hyperlink that connects one page or resource to another. Its key attribute, href, specifies the destination URL where users are directed upon clicking.
+
+Can link to web pages, email addresses, phone numbers, or sections within the same page.
+Supports attributes like target, rel, and download for enhanced functionality.
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<a href="https://www.geeksforgeeks.org/html/html-tutorial/" target="_blank">
+   HTML Tutorial
+        </a>
+</body>
+</html>
+Syntax
+<a href = "link"> Link Name </a> 
+By default, links appear as follows in all browsers:
+
+Unvisited links: underlined and blue.
+Visited links: underlined and purple.
+Active links: underlined and red.
+1. Opening Links in New Tab
+To open a link in a new browser Tab, add the target="_blank" attribute:
+
+
+
+
+
+<a href="https://www.geeksforgeeks.org/" target="_blank">GeeksforGeeks</a>
+2. Linking to Email Addresses and Phone Numbers
+To link to an email address:
+
+
+
+
+<a href="mailto:example@xyz.com">Send email</a>
+To link to a phone number:
+
+
+
+
+<a href="tel:+910000000">+910000000</a>
+3. Creating Internal Page Anchors
+To link to another section on the same page:
+
+
+
+
+
+<a href="#section1">Go to Section 1</a>
+4. Executing JavaScript
+To trigger JavaScript code:
+
+
+
+
+
+<a href="javascript:alert('Hello Geek');">Execute JavaScript</a>
+Attributes
+Here are some of the attributes are discussed below:
+
+Attributes
+
+Description
+
+charset
+
+It specifies the character set. It is not supported by HTML 5.
+
+download
+
+It is used to specify the target link to download when the user clicks.
+
+hreflang
+
+It is used to specify the language of the linked document.
+
+media
+
+It is used to specify the linked media.
+
+name
+
+It is used to specify the anchor name. It is not supported by HTML 5 you can use the global id attribute instead.
+
+rel
+
+It is used to specify the relation between the current document and the linked document.
+
+shape
+
+It is used to specify the shape of the link. It is not supported by HTML 5.
+
+type
+
+It is used to specify the type of links.
+
+target
+
+It specifies the target link.
+
+rev
+
+Specifies the relationship between the linked document and the current document. Not supported in HTML5.
+
