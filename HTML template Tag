@@ -1,0 +1,137 @@
+HTML template tag is used to store reusable HTML code fragments that are not rendered when the page loads.,Its content remains hidden on the client side and can be activated, cloned, and inserted into the document using JavaScript.
+
+Stores HTML content that is not displayed immediately on the webpage.
+Helps in reusing markup without duplicating code.
+Content is rendered only when triggered using JavaScript.
+Improves performance and keeps HTML structure clean and organized.
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>GeeksforGeeks</h1>
+    <h3>HTML template tag</h3>
+​
+    <p>
+        Content inside a template tag will
+        be hidden from the client.
+    </p>
+    
+    <!-- Html script tag starts here -->
+    <template>
+        <h2>GeeksforGeeks: A computer science portal</h2>
+        <h4>GeeksforGeeks Offline Courses</h4>
+        <ul>
+            <li>DSA</li>
+            <li>Placement & Interview Preparation</li>
+            <li>Web Development</li>
+            <li>Algorithms & basic programming</li>
+        </ul>
+    </template>
+    <!-- Html template tag ends here -->
+​
+    <p>End of the example of template tag</p>
+​
+</body>
+</html>
+we have an unordered list of the courses that we have hidden to display using the <template> tag in HTML.
+
+Syntax:
+<template id="myTemplate">
+    <p>This is template content</p>
+</template>
+Note: The <template> tag is new in HTML 5. This tag supports the global attributes in HTML.
+
+[Approach1]: Using template tag content stays hidden until used
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<body>
+    <h1>GeeksforGeeks</h1>
+    <h3>HTML template tag</h3>
+​
+    <p>
+        Content inside a template tag
+        is hidden from the client.
+    </p>
+​
+    <!-- html script tag starts here -->
+    <template>
+        <h2>GeeksforGeeks: A computer science portal</h2>
+        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20210922100958/gfg3-300x300.png">
+        Content Writer:
+        <input type="text" placeholder="author name">
+    </template>
+    <!-- html template tag ends here -->
+​
+​
+    <p>End of the example of template tag</p>
+​
+</body>
+​
+</html>
+[Approach 2]: To illustrates the uses of JavaScript to display the template tag content.
+
+
+
+
+<!DOCTYPE html>
+<html>
+​
+<body>
+    <h1>GeeksforGeeks</h1>
+    <h3>HTML template tag</h3>
+​
+    <p>
+        Click the button to get the content from a template,
+        and display it in the web page.
+    </p>
+​
+    <button onclick="myGeeks()"> Show content </button>
+​
+    <!-- Html template tag starts here -->
+    <template>
+        <h2>GeeksforGeeks: A computer science portal</h2>
+        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20210922100958/gfg3-300x300.png">
+        <br>
+        Content Writer:
+        <input type="text" placeholder="author name">
+    </template>
+    <!-- Html template tag ends here -->
+​
+    <!-- Script to display the content of template tag -->
+    <script>
+        function myGeeks() {
+            let t = document.getElementsByTagName("template")[0];
+            let clone = t.content.cloneNode(true);
+            document.body.appendChild(clone);
+        }
+    </script>
+</body>
+​
+</html>
+Output:
+
+
+HTML template tag
+Use Cases
+1. Lists and Cards
+Creates multiple list items or cards by cloning the same HTML structure using JavaScript.
+Reduces repetition and keeps the HTML code clean and consistent.
+2. User Interaction Based Rendering
+Displays content only after user actions such as button clicks or selections.
+Enhances interactivity and improves user experience.
+3. Reusable UI Components
+Helps build reusable components like modals, alerts, and navigation menus.
+Makes maintenance easier by updating the structure in one place.
+4. Improved Page Performance
+Keeps unused content hidden until it is required.
+Reduces initial page load time and improves performance.
